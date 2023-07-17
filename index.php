@@ -11,8 +11,8 @@ function run(): void
 }
 
 /**
- * Add an horizontal rule
- * Since this is just code exercises, I'm writing HTML
+ * Add a Horizontal Rule element
+ * NOTE: since this is just code exercises, I'm writing HTML
  * directly in the PHP code via echos or springf.
  * @return void
  */
@@ -21,6 +21,9 @@ function addSeparator(): void
     echo sprintf("<hr>%s", PHP_EOL);
 }
 
+/**
+ * @return void
+ */
 function runAddBinaries(): void
 {
     $a = "1010";
