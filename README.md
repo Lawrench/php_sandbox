@@ -1,2 +1,6 @@
 # php_sandbox
-some basic php exercises
+just some basic php exercises updated over time.
+
+### RUN
+* `docker compose up`
+* in your browser, open: http://localhost/

@@ -7,6 +7,18 @@ run();
 function run(): void
 {
     runAddBinaries();
+    addSeparator();
+}
+
+/**
+ * Add an horizontal rule
+ * Since this is just code exercises, I'm writing HTML
+ * directly in the PHP code via echos or springf.
+ * @return void
+ */
+function addSeparator(): void
+{
+    echo sprintf("<hr>%s", PHP_EOL);
 }
 
 function runAddBinaries(): void
