@@ -2,7 +2,7 @@
 
 namespace Strings;
 
-class AddBinaries
+class Binary
 {
 
     /**
@@ -14,7 +14,7 @@ class AddBinaries
      *
      * @return string
      */
-    public static function addBinary(string $a, string $b): string
+    public static function add(string $a, string $b): string
     {
         if (strlen($a) > strlen($b)) {
             $b = str_pad($b, strlen($a), '0', STR_PAD_LEFT);
