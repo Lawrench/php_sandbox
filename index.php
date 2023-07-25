@@ -1,8 +1,8 @@
 <?php
-require ('Utility/Helper.php');
+require ('Utility/DirectoryLoader.php');
 
-\Utility\Helper::includeAllInPath('Strings');
-\Utility\Helper::includeAllInPath('Math');
+\Utility\DirectoryLoader::includeAllInPath('Strings');
+\Utility\DirectoryLoader::includeAllInPath('Math');
 
 run();
 

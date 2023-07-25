@@ -7,7 +7,7 @@ use RecursiveIteratorIterator;
 use RegexIterator;
 use RecursiveRegexIterator;
 
-class Helper
+class DirectoryLoader
 {
     public static function includeAllInPath(string $path) : void
     {
