@@ -10,7 +10,8 @@ function run(): void
 {
     addBinaries();
     climbStairs();
-    PascalsTriangle();
+    pascalsTriangle();
+    palindrome();
 }
 
 /**
@@ -53,7 +54,7 @@ function climbStairs(): void
 /**
  * @return void
  */
-function PascalsTriangle() : void {
+function pascalsTriangle() : void {
     printTitle();
     $pascalsTriangle = \Math\PascalsTriangle::generate(10);
     $rows = [];
@@ -61,6 +62,18 @@ function PascalsTriangle() : void {
         $rows[] = '[' . implode(', ', $row) . ']';
     }
     echo implode(', ', $rows);
+}
+
+function palindrome() : void {
+    printTitle();
+    $string = 'Madam, in Eden, I\'m Adam';
+    $isPalindrome = \Strings\Palindrome::isPalindrome($string);
+    echo "Palindrome: " . $string . " = " . ($isPalindrome ? 'true' : 'false');
+
+    echo '<br />';
+    $incorrectString = "Meet the skinny blue fox";
+    $isPalindrome = \Strings\Palindrome::isPalindrome($incorrectString);
+    echo "Palindrome: " . $incorrectString . " = " . ($isPalindrome ? 'true' : 'false');
 }
 
 /**
