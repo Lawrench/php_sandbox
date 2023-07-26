@@ -10,6 +10,7 @@ function run(): void
 {
     addBinaries();
     climbStairs();
+    PascalsTriangle();
 }
 
 /**
@@ -47,6 +48,19 @@ function climbStairs(): void
          $solutions[] = \Math\Stairs::climb($i);
     }
     echo implode(', ', $solutions);
+}
+
+/**
+ * @return void
+ */
+function PascalsTriangle() : void {
+    printTitle();
+    $pascalsTriangle = \Math\PascalsTriangle::generate(10);
+    $rows = [];
+    foreach ($pascalsTriangle as $row) {
+        $rows[] = '[' . implode(', ', $row) . ']';
+    }
+    echo implode(', ', $rows);
 }
 
 /**

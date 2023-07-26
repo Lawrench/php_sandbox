@@ -16,4 +16,6 @@ class StairsTest extends TestCase
             $this->assertEquals($fibonacci[$i - 1], Stairs::climb($i));
         }
     }
+
+
 }
