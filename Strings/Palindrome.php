@@ -27,14 +27,19 @@ class Palindrome
         // }
         // return true;
 
+        // NOTE: This is a more efficient solution.
+        // $string = strtolower(preg_replace('/[^a-zA-Z0-9]/', '', $string));
+        // $len = strlen($string);
+        // $half = round($len / 2, 0, PHP_ROUND_HALF_DOWN);
+        //
+        // if ( substr($string, 0, $half) != strrev(substr($string, -1 * $half, $half)) ) {
+        //     return false;
+        // }
+
+        // final solution
         $string = strtolower(preg_replace('/[^a-zA-Z0-9]/', '', $string));
-        $len = strlen($string);
-        $half = round($len / 2, 0, PHP_ROUND_HALF_DOWN);
-
-        if ( substr($string, 0, $half) != strrev(substr($string, -1 * $half, $half)) ) {
-            return false;
-        }
-
-        return true;
+        if (empty($string)) return true;
+        $half = intdiv(strlen($string), 2) + strlen($string) % 2;
+        return substr($string, 0, $half) === strrev(substr($string, -1 * $half));
     }
 }
