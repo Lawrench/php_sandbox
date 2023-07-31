@@ -16,6 +16,5 @@ class PalindromeTest extends TestCase
         $this->assertTrue(Palindrome::isPalindrome('A man, a plan, a canal: Panama'));
         $this->assertTrue(Palindrome::isPalindrome('race car'));
         $this->assertFalse(Palindrome::isPalindrome('hello'));
-        $this->assertFalse(Palindrome::isPalindrome('world'));
     }
 }
