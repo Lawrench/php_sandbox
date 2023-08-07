@@ -12,6 +12,7 @@ function run(): void
     climbStairs();
     pascalsTriangle();
     palindrome();
+    slidingWindow();
 }
 
 /**
@@ -74,6 +75,13 @@ function palindrome() : void {
     $incorrectString = "Meet the skinny blue fox";
     $isPalindrome = \Strings\Palindrome::isPalindrome($incorrectString);
     echo "Palindrome: " . $incorrectString . " = " . ($isPalindrome ? 'true' : 'false');
+}
+
+function slidingWindow() : void {
+    printTitle();
+    $string = 'thisisalongslidingwindowthatslideslikethis';
+    $shortedSubstr = \Strings\SlidingWindow::longestSubstring($string);
+    echo "Shorted substring found in '{$string}' is: " . $shortedSubstr;
 }
 
 /**
