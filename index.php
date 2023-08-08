@@ -13,6 +13,7 @@ function run(): void
     pascalsTriangle();
     palindrome();
     slidingWindow();
+    reverseStringWithoutStrrev();
 }
 
 /**
@@ -82,6 +83,14 @@ function slidingWindow() : void {
     $string = 'thisisalongslidingwindowthatslideslikethis';
     $shortedSubstr = \Strings\SlidingWindow::longestSubstring($string);
     echo "Shorted substring found in '{$string}' is: " . $shortedSubstr;
+}
+
+function reverseStringWithoutStrrev() : void {
+    printTitle();
+    $string = 'hello world';
+    $chars = str_split($string);
+    \Strings\Reorder::reverse($chars);
+    echo "The reverse of '{$string}' is: " . implode('', $chars);
 }
 
 /**
